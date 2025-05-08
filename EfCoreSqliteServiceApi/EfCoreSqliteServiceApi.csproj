@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Configurations>Debug;Release;pserv</Configurations>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>b194687e-9b70-4f76-8201-6a3cf90a7496</UserSecretsId>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Dockerfile Include="Dockerfile" />
+	</ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="14.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.15" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.15" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="8.0.15" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.15">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.15" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.15" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.15">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+	  <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EfCoreSqliteLibs\EfCoreSqliteLibs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+</Project>

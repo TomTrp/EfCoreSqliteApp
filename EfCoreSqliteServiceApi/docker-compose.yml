@@ -1,0 +1,9 @@
+﻿services:
+  web:
+    build: .
+    ports:
+      - "5000:80"
+    volumes:
+      - ./data:/app/Data
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

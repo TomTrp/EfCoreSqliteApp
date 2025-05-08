@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreSqliteServiceApi", "EfCoreSqliteServiceApi\EfCoreSqliteServiceApi.csproj", "{E10BF9CF-34BD-4850-8C56-FBF4C4FFD661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreSqliteLibs", "EfCoreSqliteLibs\EfCoreSqliteLibs.csproj", "{5AE2F649-7696-40BC-A9A4-71391991AE5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		pserv|Any CPU = pserv|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E10BF9CF-34BD-4850-8C56-FBF4C4FFD661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10BF9CF-34BD-4850-8C56-FBF4C4FFD661}.pserv|Any CPU.ActiveCfg = pserv|Any CPU
+		{E10BF9CF-34BD-4850-8C56-FBF4C4FFD661}.pserv|Any CPU.Build.0 = pserv|Any CPU
+		{E10BF9CF-34BD-4850-8C56-FBF4C4FFD661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10BF9CF-34BD-4850-8C56-FBF4C4FFD661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE2F649-7696-40BC-A9A4-71391991AE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE2F649-7696-40BC-A9A4-71391991AE5A}.pserv|Any CPU.ActiveCfg = pserv|Any CPU
+		{5AE2F649-7696-40BC-A9A4-71391991AE5A}.pserv|Any CPU.Build.0 = pserv|Any CPU
+		{5AE2F649-7696-40BC-A9A4-71391991AE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE2F649-7696-40BC-A9A4-71391991AE5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F16A48F-F6E3-41C2-8366-572DEF05385A}
+	EndGlobalSection
+EndGlobal
