@@ -1,5 +1,10 @@
 # EfCoreSqliteApp
-Learning to use EFCore, SQLite and AutoMapper for RESTFUL API
+Learning to use EFCore, SQLite for RESTFUL API and personal interest
+- Clean Structure
+- Custom Exception
+- Middleware
+- Navigation Properties
+- AutoMapper
 
 # How to run it
 1. Build all projects
