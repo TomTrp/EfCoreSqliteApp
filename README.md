@@ -3,6 +3,7 @@ Learning to use EFCore, SQLite for RESTFUL API and personal interest
 - Clean Structure
 - Custom Exception
 - Middleware
+- IActionFilter
 - Navigation Properties
 - AutoMapper
 
