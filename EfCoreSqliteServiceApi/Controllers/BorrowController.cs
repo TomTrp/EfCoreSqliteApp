@@ -18,22 +18,44 @@ namespace EfCoreSqliteServiceApi.Controllers
         [HttpGet("{borrowId}")]
         public async Task<IActionResult> GetBorrow(int borrowId)
         {
-            BorrowReadDto? borrow = await _service.GetBorrowAsync(borrowId);
-            return Ok(borrow);
+            BorrowReadDto? res = await _service.GetBorrowAsync(borrowId);
+            return Ok(res);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetBorrows()
         {
-            List<BorrowReadDto> borrowed = await _service.GetAllBorrowedAsync();
-            return Ok(borrowed);
+            List<BorrowReadDto> res = await _service.GetAllBorrowsAsync();
+            return Ok(res);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddBook([FromBody] BorrowCreateDto dto)
+        public async Task<IActionResult> AddBorrow([FromBody] BorrowCreateDto dto)
         {
-            Borrow borrow = await _service.CreateBorrowAsync(dto);
-            return Ok(borrow);
+            Borrow res = await _service.CreateBorrowAsync(dto);
+            return Ok(res);
+        }
+
+        [HttpPost("multiple")]
+        public async Task<IActionResult> AddMultipleBorrow([FromBody] BorrowCreateManyDto dto)
+        {
+            List<Borrow> res = await _service.CreateMultipleBorrowAsync(dto);
+            return Ok(res);
+        }
+
+
+        [HttpPut("{borrowId}")]
+        public async Task<IActionResult> UpdateBorrow(int borrowId)
+        {
+            Borrow res = await _service.UpdateBorrowAsync(borrowId);
+            return Ok(res);
+        }
+
+        [HttpDelete("{borrowId}")]
+        public async Task<IActionResult> DeleteBorrow(int borrowId)
+        {
+            bool res = await _service.DeleteBorrowAsync(borrowId);
+            return Ok(res);
         }
     }
    

@@ -10,6 +10,15 @@ namespace EfCoreSqliteLibs.DTO
         public int BorrowUserId { get; set; }
     }
 
+    public class BorrowCreateManyDto
+    {
+        [Required]
+        public List<int> BookIds { get; set; } = [];
+        [Required]
+        public int BorrowUserId { get; set; }
+        public DateTime BorrowDate { get; set; }
+    }
+
     public class BorrowReadDto
     {
         public int BorrowId { get; set; }
