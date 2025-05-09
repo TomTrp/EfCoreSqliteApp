@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using EfCoreSqliteLibs.DTO;
 using EfCoreSqliteLibs.Entities;
-using EfCoreSqliteLibs.Service.Interfaces.Borrowed;
+using EfCoreSqliteLibs.Service.Interfaces;
 
 namespace EfCoreSqliteServiceApi.Controllers
 {

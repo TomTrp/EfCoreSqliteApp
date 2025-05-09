@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EfCoreSqliteLibs.Entities;
-using EfCoreSqliteLibs.Repository.Interfaces.Borrowed;
+using EfCoreSqliteLibs.Repository.Interfaces;
 
-namespace EfCoreSqliteLibs.Repository.Implementations.Borrowed
+namespace EfCoreSqliteLibs.Repository.Implementations
 {
     public class BorrowRepository : IBorrowRepository
     {
@@ -15,7 +15,8 @@ namespace EfCoreSqliteLibs.Repository.Implementations.Borrowed
         public async Task<Borrow?> GetAsync(int borrowId)
         {
             return await _context.Borrow
-                .Include(b => b.Book)
+                .AsNoTracking()
+                .Include(b => b.Book) // act like left join
                 .Include(bu => bu.User)
                 .FirstOrDefaultAsync(x => x.BorrowId == borrowId);
         }
@@ -23,6 +24,7 @@ namespace EfCoreSqliteLibs.Repository.Implementations.Borrowed
         public async Task<List<Borrow>> GetAllAsync()
         {
             return await _context.Borrow
+                .AsNoTracking()
                 .Include(b => b.Book)
                 .Include(bu => bu.User)
                 .ToListAsync();

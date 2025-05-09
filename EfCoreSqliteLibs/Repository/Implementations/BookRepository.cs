@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EfCoreSqliteLibs.Entities;
-using EfCoreSqliteLibs.Repository.Interfaces.Books;
+using EfCoreSqliteLibs.Repository.Interfaces;
 
-namespace EfCoreSqliteLibs.Repository.Implementations.Books
+namespace EfCoreSqliteLibs.Repository.Implementations
 {
     public class BookRepository : IBookRepository
     {
@@ -14,12 +14,16 @@ namespace EfCoreSqliteLibs.Repository.Implementations.Books
 
         public async Task<Book?> GetAsync(int bookId)
         {
-            return await _context.Books.FirstOrDefaultAsync(x => x.BookId == bookId);
+            return await _context.Books
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.BookId == bookId);
         }
 
         public async Task<List<Book>> GetAllAsync()
         {
-            return await _context.Books.ToListAsync();
+            return await _context.Books
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task<Book> AddAsync(Book data)

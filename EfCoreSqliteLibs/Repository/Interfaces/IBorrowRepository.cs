@@ -1,6 +1,6 @@
 ﻿using EfCoreSqliteLibs.Entities;
 
-namespace EfCoreSqliteLibs.Repository.Interfaces.Borrowed
+namespace EfCoreSqliteLibs.Repository.Interfaces
 {
     public interface IBorrowRepository
     {

@@ -1,6 +1,6 @@
 ﻿using EfCoreSqliteLibs.Entities;
 
-namespace EfCoreSqliteLibs.Repository.Interfaces.Books
+namespace EfCoreSqliteLibs.Repository.Interfaces
 {
     public interface IBookRepository
     {

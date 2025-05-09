@@ -1,7 +1,7 @@
 ﻿using EfCoreSqliteLibs.DTO;
 using EfCoreSqliteLibs.Entities;
 
-namespace EfCoreSqliteLibs.Service.Interfaces.Borrowed
+namespace EfCoreSqliteLibs.Service.Interfaces
 {
     public interface IBorrowService
     {

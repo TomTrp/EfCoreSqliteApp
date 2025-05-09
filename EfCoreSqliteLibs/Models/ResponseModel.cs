@@ -8,8 +8,10 @@ namespace EfCoreSqliteLibs.Models
 {
     public class ResponseModel<T>
     {
-        public bool IsComplete { get; set; } = false;
-        public string StatusCode { get; set; } = string.Empty;
+        public bool IsSuccess { get; set; } = true;
+        public int StatusCode { get; set; }
+        public string? Message { get; set; }
+        public string? TaceId { get; set; }
         public T? DataResult { get; set; }
     }
 }
